@@ -1,4 +1,4 @@
-import { incrementNeighbours } from "./cellsManipulator";
+import { incrementNeighbors } from './cellsManipulator';
 
 export type Cell = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 export type Field = Cell[][];
@@ -12,8 +12,10 @@ export const CellState: Record<string, Cell> = {
   weakMark: 12,
 };
 
-export const emptyFiledGenerator = (size: number, state: Cell = CellState.empty): Field =>
-  new Array(size).fill(null).map(() => new Array(size).fill(state));
+export const emptyFiledGenerator = (
+  size: number,
+  state: Cell = CellState.empty
+): Field => new Array(size).fill(null).map(() => new Array(size).fill(state));
 
 export const fieldGenerator = (size: number, probability: number): Field => {
   if (probability < 0 || probability > 1)
@@ -29,14 +31,14 @@ export const fieldGenerator = (size: number, probability: number): Field => {
       if (restCellsWithBombs === 0) return result;
 
       if (restCellsWithBombs / unprocessedCells > Math.random()) {
-        result[i][j] = CellState.bomb
-        incrementNeighbours([i, j], result)
-        restCellsWithBombs--
+        result[i][j] = CellState.bomb;
+        incrementNeighbors([i, j], result);
+        restCellsWithBombs--;
       }
 
-      unprocessedCells--
+      unprocessedCells--;
     }
   }
 
-  return result
+  return result;
 };

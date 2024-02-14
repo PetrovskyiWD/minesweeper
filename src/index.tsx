@@ -1,9 +1,9 @@
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
 
-import App from './App'
+import App from './App';
 
-import '../styles/index.scss'
+import '../styles/index.scss';
 
-const root = createRoot(document.getElementById("root"))
+const root = createRoot(document.getElementById('root'));
 
-root.render(<App />)
+root.render(<App />);

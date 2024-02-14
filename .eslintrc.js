@@ -7,11 +7,13 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: ['react'],
   rules: {
@@ -19,9 +21,16 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        parser: 'flow',
+        parser: 'typescript',
       },
     ],
     quotes: ['error', 'single'],
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
