@@ -20,8 +20,9 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        singleQuote: true,
         parser: 'typescript',
+        singleQuote: true,
+        endOfLine: 'auto',
       },
     ],
     quotes: ['error', 'single'],
