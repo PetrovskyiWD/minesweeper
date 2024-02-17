@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
+import { type FC } from 'react';
 
 export interface HeaderProps {
-  children: React.ReactNode;
+  title: string;
 }
 
-const Header = styled.h1<HeaderProps>`
+const Header: FC<HeaderProps> = ({ title }) => <Title>{title}</Title>;
+
+const Title = styled.h1`
   font-size: 2em;
 `;
 

@@ -1,12 +1,18 @@
+import type { StoryObj, Meta } from '@storybook/react';
 import Legend from './Legend.component';
 
-const Template = (args: Record<string, any>): JSX.Element => (
-  <Legend {...args} />
-);
+type Story = StoryObj<typeof Legend>;
 
-export const Default = Template.bind({});
-
-export default {
-  title: 'Legend',
+const meta: Meta<typeof Legend> = {
   component: Legend,
 };
+
+export const Default: Story = {
+  args: {
+    feature: 'Flag',
+    firstAction: 'Ctrl',
+    secondAction: 'Click',
+  },
+};
+
+export default meta;
