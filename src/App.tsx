@@ -1,11 +1,14 @@
-import Header from './components/Header/Header.component';
-import Legend from './components/Legend/Legend.component';
+import Top from './containers/Top/Top.container';
 
 export default function App(): JSX.Element {
   return (
     <div>
-      <Header title="Minesweeper" />
-      <Legend feature="Flag" firstAction="Ctrl" secondAction="Click" />
+      <Top
+        title="Minesweeper"
+        feature="Flag"
+        firstAction="Ctrl"
+        secondAction="Click"
+      />
     </div>
   );
 }

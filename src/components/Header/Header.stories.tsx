@@ -9,7 +9,7 @@ const meta: Meta<typeof Header> = {
 
 export const Default: Story = {
   args: {
-    title: 'Minesweeper',
+    title: 'Minesweeper!',
   },
 };
 
