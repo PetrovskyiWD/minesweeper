@@ -51,7 +51,7 @@ describe('Check item in field', () => {
   });
 });
 
-describe('Check neighbour selectors', () => {
+describe('Check neighbor selectors', () => {
   it('With [0, 0] coords', () => {
     expect(getNeighborItems([0, 0])).toStrictEqual({
       top: [-1, 0],
@@ -79,7 +79,7 @@ describe('Check neighbour selectors', () => {
   });
 });
 
-describe('Check Increment Neighbours', () => {
+describe('Check Increment Neighbors', () => {
   describe('Simple cases', () => {
     it('Filed with only one item', () => {
       expect(incrementNeighbors([0, 0], [[bomb]])).toStrictEqual([[bomb]]);
