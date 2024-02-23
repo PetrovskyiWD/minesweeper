@@ -23,7 +23,7 @@ describe('Field Generator', () => {
       ]);
     });
 
-    it('3x3 eith hidden state', () => {
+    it('3x3 with hidden state', () => {
       expect(emptyFiledGenerator(3, hidden)).toStrictEqual([
         [hidden, hidden, hidden],
         [hidden, hidden, hidden],
@@ -70,8 +70,6 @@ describe('Field Generator', () => {
       const mines = 25;
       const probability = mines / (size * size);
       const field = fieldGenerator(size, probability);
-
-      console.table(field);
 
       const flatField = field.flat();
 
