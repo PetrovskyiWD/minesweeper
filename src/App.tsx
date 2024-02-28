@@ -1,14 +1,16 @@
+import Scoreboard from './containers/Scoreboard/Scoreboard.container';
 import Top from './containers/Top/Top.container';
 
 export default function App(): JSX.Element {
   return (
-    <div>
+    <>
       <Top
         title="Minesweeper"
         feature="Flag"
         firstAction="Ctrl"
         secondAction="Click"
       />
-    </div>
+      <Scoreboard count="010" levels={['Easy', 'Medium', 'Hard']} time="00" />
+    </>
   );
 }

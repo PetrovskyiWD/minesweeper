@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { useState, type FC } from 'react';
 
 interface ResetProps {
-  handleReset: () => void;
+  handleReset?: () => void;
 }
 
 const Reset: FC<ResetProps> = ({ handleReset }) => {
